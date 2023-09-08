@@ -1,0 +1,260 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0%;
+}
+
+.wrapper {
+    background-color: #116A7B;
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+}
+
+aside {
+    height: 100vh;
+    display: flex;
+    position: sticky;
+    top: 0;
+    height: 100vh;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 32px;
+    padding-right: 0;
+    color: #CDC2AE;
+}
+
+.logo {
+font-weight: 400;
+font-size: 1.3rem;
+}
+
+.category-button{
+    background-color: transparent;
+    border: 0;
+    color: #CDC2AE;
+    font-size: 16px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    font-weight: 600;
+    padding: 16px;
+    font-size: 14px;
+    width: 100%;
+}
+
+.category-button.active {
+    background-color: #CDC2AE;
+    color: #116A7B;
+    border-top-left-radius: 16px;
+    border-bottom-left-radius: 16px;
+    position: relative;
+}
+
+.category-button.active::before {
+    content: '';
+    position: absolute;
+    bottom: 100%;
+    right: 0;
+    width: 16px;
+    height: 32px;
+    background-color: transparent;
+    border-bottom-right-radius: 5px;
+    box-shadow: 0 1rem 0 #CDC2AE;
+}
+
+.category-button.active::after {
+    content: '';
+    position: absolute;
+    top: 100%;
+    right: 0;
+    width: 16px;
+    height: 32px;
+    background-color: transparent;
+    border-top-right-radius: 5px;
+    box-shadow: 0 -1rem 0 #CDC2AE;
+}
+.cart-button {
+    margin-top: 40px;
+}
+
+.amount {
+    background-color: #ECE5C7;
+    color: #116A7B;
+    padding: 2px 4px;
+    border-radius: 4px;
+}
+
+.cart-button.active .amount {
+    background-color: #116A7B;
+    color: #ECE5C7;
+}
+
+li {
+    list-style: none;
+}
+
+.product-image {
+    max-width: 100%;
+    border-radius: 16px;
+}
+
+.menu {
+    display: grid;
+    gap: 8px;
+}
+
+
+a {
+    color: white;
+    text-decoration: none;
+}
+
+main {
+    margin: 20px;
+    margin-left: 0;
+    background-color: #CDC2AE;
+    border-radius: 30px;
+    padding: 46px;
+}
+
+.footer-text {
+    color: #CDC2AE;
+    font-size: 14px;
+}
+
+.main-title {
+    color: #116A7B;
+    margin-bottom: 32px;
+}
+
+.product-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
+}
+
+.product-detail{
+    background-color: #116A7B;
+    color: #CDC2AE;
+    padding: 8px;
+    border-radius: 16px;
+    margin-top: -32px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.product-title {
+    font-size: 20px;
+}
+
+.add-product {
+    border: 0;
+    background-color: #CDC2AE;
+    color: #116A7B;
+    padding: 6px;
+    text-transform: uppercase;
+    border-radius: 32px;
+    cursor: pointer;
+    border: 2px solid #CDC2AE;
+    transition: background-color 0.2s,   color 0.2s;
+}
+
+.add-product:hover {
+    background-color: #116A7B;
+    color: #CDC2AE;
+}
+
+/** CART **/
+
+.cart-container {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.empty-cart, 
+.bought-cart {
+    color: #116A7B;
+}
+
+.products-cart {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.product-cart {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #116A7B;
+    color: #CDC2AE;
+    padding: 8px;
+    padding-right: 24px;
+    border-radius: 16px;
+}
+
+.product-cart-image {
+    width: 40px;
+    border-radius: 12px;
+}
+
+.product-cart small {
+    font-size: 12px;
+}
+
+.product-cart-delete {
+    border: 0;
+    background-color: transparent;
+    color: red;
+    cursor: pointer;
+}
+
+.actions-cart {
+    display: flex;
+    justify-content: space-between;
+}
+
+.empty-actions-cart {
+    border: 0;
+    background-color: #116A7B;
+    padding: 16px;
+    border-radius: 16px;
+    color: #CDC2AE;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+.rigth-actions-cart {
+    display: flex;
+}
+
+.total-actions-cart {
+    display: flex;
+    background-color: #ECE5C7;
+    padding: 16px;
+    border-top-left-radius: 16px;
+    border-bottom-left-radius: 16px;
+    color: #116A7B;
+    text-transform: uppercase;
+    gap: 16px;
+}
+
+
+.buy-actions-cart {
+    border: 0;
+    background-color: #116A7B;
+    padding: 16px;
+    border-top-right-radius: 16px;
+    border-bottom-right-radius: 16px;
+    color: #CDC2AE;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+.disabled {
+    display: none;
+}
